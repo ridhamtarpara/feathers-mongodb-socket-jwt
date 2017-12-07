@@ -10,6 +10,7 @@ const configuration = require('feathers-configuration');
 const hooks = require('feathers-hooks');
 const rest = require('feathers-rest');
 const socketio = require('feathers-socketio');
+const sync = require('feathers-sync');
 
 const handler = require('feathers-errors/handler');
 const notFound = require('feathers-errors/not-found');
@@ -40,9 +41,13 @@ app.use('/', feathers.static(app.get('public')));
 app.configure(hooks());
 app.configure(mongoose);
 app.configure(rest());
-app.configure(socketio({
-
-}));
+app.configure(socketio({}));
+app.configure(sync({
+  db: 'redis://localhost:6379',
+  connect: (err) => {
+    console.log('Redis connected');
+  }
+}))
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);

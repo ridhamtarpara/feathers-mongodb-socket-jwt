@@ -2,6 +2,8 @@
 
 > Demo application to test feather's packages and capabilities with real-time 
 
+### It uses `feathers-sync` package to synchronize service events with publish/subscribe to scale real-time APIs
+
 It is build on https://github.com/feathersjs/feathers-chat
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [MongoDB](https://www.mongodb.com/download-center#community) installed.
