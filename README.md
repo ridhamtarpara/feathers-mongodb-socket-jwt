@@ -2,7 +2,7 @@
 
 > Demo application to test feather's packages and capabilities with real-time 
 
-It is build on https://github.com/feathersjs/feathers-chat
+It is build on https://github.com/feathersjs/feathers-chat and vanilaJS as frontend framework
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [MongoDB](https://www.mongodb.com/download-center#community) installed.
 2. Install your dependencies
